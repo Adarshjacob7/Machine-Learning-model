@@ -17,7 +17,7 @@ This project contains a machine learning model recommends ten movies based on a 
 
 - <b>Windows 10</b> (21H2)
 
-<h2>Program walk-through:</h2>
+<h2>IGNORE THIS:</h2>
 
 <p align="center">
 Launch the utility: <br/>

@@ -1,21 +1,64 @@
 <h1>ML model for movie recommendations</h1>
 
- ### [LINK TO BE UPLOADED](https://youtu.be/7eJexJVCqJo)
+ ### [LINK TO BE UPLOADED]()
 
 <h2>Description</h2>
-This project contains a machine learning model recommends ten movies based on a list of movies movies you like. In the first step, I webscrapped through lists of movies, organised by year, through Boxofficemojo's list of Highest grossing movies and had saved this as a csv file. I then used this data to Webscrape from API site for IMDB, to collect relevant information of Director, cast, certification, movie description and imdb rating and additional data required for my ML model. Using the data collect across years from 2016- 2025, i  used this data as my training model for my ML to understand the diversity of the set. The model then asks the user to input a list of 5 movies they like and gives them a list of 10 movies as recommendation taking into account the various factors needed for liking a movie. 
+This project builds an end-to-end movie recommendation system by combining web scraping, API integration, data processing, and machine learning.
+
+I first scraped worldwide box office data from Box Office Mojo using Python (Requests + BeautifulSoup), extracting key financial metrics such as worldwide, domestic, and foreign collections along with their percentages. The scraped data was cleaned, structured, and stored as a CSV dataset.
+
+Next, I enriched this dataset by integrating the OMDb API, fetching additional movie metadata including IMDb ratings, directors, cast, genres, certifications, vote counts, and plot descriptions.
+
+Using the merged dataset, I developed a content-based recommendation model. Movie features were combined into a single text representation and vectorized using TF-IDF, with cosine similarity used to measure movie-to-movie relevance. Given 5 input movies, the model recommends 10 similar movies based on thematic and metadata similarity. 
 
 <br />
 
+<h2>Data Collection</h2>
 
-<h2>Languages and Utilities Used</h2>
+- **Web Scraping:**  
+  Scraped worldwide box office data from **Box Office Mojo** using Python (Requests + BeautifulSoup).  
+  Extracted movie titles, worldwide, domestic, and foreign collections with percentages.
 
-- <b>Python</b> 
-- <b>SQL</b>
+- **API Integration:**  
+  Enriched the dataset using the **OMDb API** to fetch IMDb ratings, directors, cast, genres, certifications, votes, and plot summaries.
 
-<h2>Environments Used </h2>
+<br />
 
-- <b>Windows 10</b> (21H2)
+<h2>Feature Engineering & Model</h2>
+
+- Combined multiple text features into a single column
+- Vectorized text using **TF-IDF**
+- Used **cosine similarity** for content-based recommendations
+- Proper ML workflow with train-test split
+
+<br />
+
+<h2>Recommendation Logic</h2>
+
+- Accepts **5 input movies**
+- Computes similarity against the entire dataset
+- Returns **top 10 similar movies**
+- Excludes input movies from results
+
+<br />
+
+<h2>Tech Stack</h2>
+
+- Python
+- Requests & BeautifulSoup – Web Scraping
+- Pandas & NumPy – Data Processing
+- OMDb API – Data Enrichment
+- Scikit-learn – TF-IDF, Cosine Similarity
+- Machine Learning – Content-Based Filtering
+
+<br />
+
+<h2>Author</h2>
+
+Adarsh Joshua
+Data Analytics & Machine Learning Enthusiast
+
+<br />
 
 <h2>IGNORE THIS:</h2>
 
